@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pomegranate Fruit Stage Detection</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/slick.css"/>
+    <link href="../static/css/tooplate-little-fashion.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="/home">
+                    <strong><span>Pomegranate Fruit</span> Stage Detection</strong>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link " href="/home">Home</a>
+                        </li>
+
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/video">Upload</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/camera">OpenCamera</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/performance">Performance</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/charts">Charts</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                    </ul>
+
+                    
+                </div>
+            </div>
+        </nav>
+
+            <header class="site-header section-padding d-flex justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12">
+                            <h1>
+                                <span class="d-block text-primary">You can upload Image or Video below</span>
+                                <span class="d-block text-dark">For Detection</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="product-detail section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <div class="product-thumb">
+                                <video width="100%" controls class="img-fluid product-image" autoplay loop muted>
+                                    <source src="../static/images/flower.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="product-info d-flex">
+                                <div>
+                                    <h2 class="product-title mb-0">Select Image or video</h2>
+
+                                    
+                                </div>
+
+                                <small class="product-price text-muted ms-auto mt-auto mb-5"></small>
+                            </div>
+
+                            
+
+                            <div class="product-cart-thumb row">
+                                <div class="col-lg-6 col-12">
+                                    <form action="/upload" method="post" enctype="multipart/form-data">
+                                        <label for="fileUpload" class="form-label cart-form-select">Upload Video</label>
+                                        <input type="file" class="form-control cart-form-select" id="fileUpload" name="file" accept="file" required>
+                                        <button type="submit" class="btn custom-btn mt-3 cart-btn">Upload</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            
+            
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="/">Pomogranate Fruit</a> Stage Detection</h4>
+                        <!-- <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little Fashion</strong></p>
+                        <br>
+                        <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank">Tooplate</a></p> -->
+                    </div>
+
+                    
+                    
+
+                </div>
+            </div>
+        </footer>
+
+       
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/Headroom.js"></script>
+        <script src="../static/js/jQuery.headroom.js"></script>
+        <script src="../static/js/slick.min.js"></script>
+        <script src="../static/js/custom.js"></script>
+
+    </body>
+</html>
