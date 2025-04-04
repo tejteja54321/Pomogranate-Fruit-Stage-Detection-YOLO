@@ -123,7 +123,47 @@ Sent through serial port using PySerial in `run.py`.
 git clone https://github.com/tejteja54321/Pomegranate-Fruit-Stage-Detection-YOLO.git
 cd Pomegranate-Fruit-Stage-Detection-YOLO
 ```
----
 
-```bash
-### Run
+### 2️⃣ Install Dependencies
+``` bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run the Flask Web App (AI Detection System)
+``` bash
+python app.py
+```
+
+### 4️⃣ Run the Raspberry Pi Serial Communication Script (Hardware Control)
+``` bash
+python run.py
+```
+
+### 5️⃣ Open in Browser
+Visit http://127.0.0.1:5000 to access the web interface.
+
+---
+## 📁 Project Structure
+``` php
+Pomegranate-Fruit-Stage-Detection-YOLO/
+│
+├── yolov10/                    # YOLOv10n Model Files
+│   ├── best.pt                 # Trained weights
+│   └── yolov10n.pt             # Base model (optional)
+│
+├── templates/                  # HTML templates for Flask app
+│   ├── home.html
+│   ├── login.html
+│   ├── register.html
+│   ├── upload.html
+│   └── live_detection.html
+│
+├── static/                     # CSS, images, custom JS
+│   └── style.css
+│
+├── app.py                      # Flask backend
+├── run.py                      # Raspberry Pi GPIO + Serial controller
+├── requirements.txt            # Required Python libraries
+└── README.md                   # Project documentation
+
+```
