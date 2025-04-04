@@ -107,6 +107,32 @@ Serial connection is established using `pyserial` and the data is sent in the `r
 
 ---
 
+
+## 📁 Project Structure
+
+pomegranate-fruit-stage-detection/
+│
+├── yolov10/                   # YOLOv10 model files
+│   ├── best.pt
+│   └── last.pt
+│
+├── templates/                 # HTML templates
+│   ├── home.html
+│   ├── login.html
+│   ├── upload.html
+│   └── live_detection.html
+│
+├── static/                    # CSS, JS, Images
+│
+├── app.py                     # Main Flask app
+├── run.py                     # Serial communication script
+├── requirements.txt
+└── README.md
+
+
+--- 
+
+
 ## 🚀 How to Run
 
 ### 1. Clone the Repo
@@ -135,23 +161,3 @@ Go to http://127.0.0.1:5000 in your browser.
 
 
 
-## 📁 Project Structure
-
-pomegranate-fruit-stage-detection/
-│
-├── yolov10/                   # YOLOv10 model files
-│   ├── best.pt
-│   └── last.pt
-│
-├── templates/                 # HTML templates
-│   ├── home.html
-│   ├── login.html
-│   ├── upload.html
-│   └── live_detection.html
-│
-├── static/                    # CSS, JS, Images
-│
-├── app.py                     # Main Flask app
-├── run.py                     # Serial communication script
-├── requirements.txt
-└── README.md
