@@ -125,5 +125,5 @@ cd Pomegranate-Fruit-Stage-Detection-YOLO
 
 ---
 
-``bash
+```bash
 ### Run
