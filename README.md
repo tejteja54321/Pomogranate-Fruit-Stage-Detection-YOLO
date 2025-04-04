@@ -68,12 +68,14 @@ This project identifies **five growth stages** of a pomegranate fruit and sends 
 
 ## 🌐 Flask Web App Features
 
-| Page              | Description |
-|-------------------|-------------|
-| **Home**          | Welcome page |
-| **Login/Register**| User authentication |
-| **Upload Page**   | Upload image/video for detection |
-| **Live Detection**| Real-time camera detection using OpenCV |
+| Page               | Description                                   |
+|--------------------|-----------------------------------------------|
+| **Home**           | Welcome page introducing the platform         |
+| **Login/Register** | User authentication                          |
+| **Upload Page**    | Upload image or video for detection           |
+| **Live Detection** | Real-time camera detection using OpenCV       |
+| **Performance Page** | Shows model accuracy, confidence, and metrics |
+| **Charts**         | Displays graphical insights of detections     |
 
 ### 🔍 Additional Features:
 
@@ -92,13 +94,14 @@ Raspberry Pi is used to interact with external components (like LEDs, motors) ba
 
 ### 🧠 Example Actions:
 
-| Stage         | Hardware Action                 |
-|---------------|----------------------------------|
-| Bud           | Blue LED ON                     |
-| Early-Fruit   | Yellow LED ON                   |
-| Flower        | Pink LED ON                     |
-| Mid-Growth    | Trigger pesticide sprayer       |
-| Ripe          | Trigger fruit plucking mechanism|
+| Stage         | Hardware Action                     |
+|---------------|--------------------------------------|
+| Bud           | Sends value `1` and displays on LED  |
+| Early-Fruit   | Sends value `2` and displays on LED  |
+| Flower        | Sends value `3` and displays on LED  |
+| Mid-Growth    | Sends value `4` and displays on LED  |
+| Ripe          | Sends value `5` and displays on LED  |
+
 
 ---
 
