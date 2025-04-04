@@ -111,5 +111,5 @@ Serial connection is established using `pyserial` and the data is sent in the `r
 
 ### 1. Clone the Repo
 ```bash
-git clone https://github.com/your-username/pomegranate-fruit-stage-detection.git
+git clone https://github.com/tejteja54321/pomegranate-fruit-stage-detection.git
 cd pomegranate-fruit-stage-detection
