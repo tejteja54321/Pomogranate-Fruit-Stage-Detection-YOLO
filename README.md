@@ -189,3 +189,15 @@ Stay tuned!**
 
 ## 📝 License
 This project is **free to use** — just **ask for permission** before using it for personal, academic, or commercial purposes.
+
+
+## 📬 Contact & Support
+- 📧 Email: tejteja54321@gmail.com
+- 🔗 GitHub: (https://github.com/tejteja54321/)
+- 🌐 LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/teja-c-03a07320b/)
+
+⭐ If you like this project, don't forget to give it a star! ⭐
+👉 Star this repository 🚀
+
+✅ Done!
+**NOTE:** I Haven't uploaded dataset due to size limit if you need dataset please feel free to send mail or send message in LinkedIn
