@@ -172,3 +172,8 @@ Pomegranate-Fruit-Stage-Detection-YOLO/
 └── README.md                   # Project documentation
 
 ```
+---
+
+## 🖼️ Demo
+**🧪 Screenshots and video demo will be added once the project is completed.
+Stay tuned!**
