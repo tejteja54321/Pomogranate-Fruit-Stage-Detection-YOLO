@@ -122,3 +122,6 @@ Sent through serial port using PySerial in `run.py`.
 ```bash
 git clone https://github.com/tejteja54321/Pomegranate-Fruit-Stage-Detection-YOLO.git
 cd Pomegranate-Fruit-Stage-Detection-YOLO
+
+
+### Run
