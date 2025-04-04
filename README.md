@@ -177,3 +177,15 @@ Pomegranate-Fruit-Stage-Detection-YOLO/
 ## 🖼️ Demo
 **🧪 Screenshots and video demo will be added once the project is completed.
 Stay tuned!**
+
+---
+
+## 🙌 Credits
+- YOLOv10 model by WongKinYiu
+- Flask framework by Pallets Projects
+- Raspberry Pi hardware and GPIO libraries
+
+---
+
+## 📝 License
+This project is **free to use** — just **ask for permission** before using it for personal, academic, or commercial purposes.
