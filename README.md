@@ -167,7 +167,7 @@ Pomegranate-Fruit-Stage-Detection-YOLO/
 │   └── css & js files
 │
 ├── app.py                      # Flask backend
-├── run.py                      # Raspberry Pi GPIO + Serial controller
+├── run.py                      # Flask + Raspberry Pi GPIO + Serial controller
 ├── requirements.txt            # Required Python libraries
 └── README.md                   # Project documentation
 
