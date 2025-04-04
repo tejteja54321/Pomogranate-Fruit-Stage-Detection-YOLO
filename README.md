@@ -1,5 +1,6 @@
 # 🍎 Pomegranate Fruit Stage Detection using YOLOv10 🚀  
-A complete AI + Web + IoT solution to classify pomegranate fruit stages and trigger hardware responses using a Raspberry Pi.
+
+A complete AI + Web + IoT solution that classifies **pomegranate fruit stages** using **YOLOv10**, provides a **Flask-based web interface**, and triggers **hardware actions via Raspberry Pi**.
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![YOLOv10](https://img.shields.io/badge/YOLO-v10n-red)
@@ -9,6 +10,7 @@ A complete AI + Web + IoT solution to classify pomegranate fruit stages and trig
 ---
 
 ## 📚 Table of Contents
+
 - [🔍 Overview](#-overview)
 - [🛠️ Tech Stack](#-tech-stack)
 - [🎯 YOLOv10 Model Training](#-yolov10-model-training)
@@ -25,141 +27,98 @@ A complete AI + Web + IoT solution to classify pomegranate fruit stages and trig
 
 ## 🔍 Overview
 
-This project detects and classifies **five different stages of pomegranate fruit** using the **YOLOv10n** model, integrates it into a **Flask web application**, and sends output to a **Raspberry Pi** via serial communication to control LEDs or any other connected hardware.
+This project identifies **five growth stages** of a pomegranate fruit and sends corresponding signals to **Raspberry Pi hardware** using serial communication. It includes:
 
-### 🌱 Detected Fruit Stages:
-- **Bud**
-- **Flower**
-- **Early-Fruit**
-- **Mid-Growth**
-- **Ripe**
+- **YOLOv10n-based model** trained on a custom dataset
+- **Flask web application** for interaction
+- **Raspberry Pi hardware integration** to automate physical actions (e.g., LED, pump, motor)
+
+### 🍇 Detected Fruit Stages:
+
+1. Bud  
+2. Flower  
+3. Early-Fruit  
+4. Mid-Growth  
+5. Ripe
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer         | Tools/Frameworks               |
-|---------------|-------------------------------|
-| **Model**     | YOLOv10n (Pretrained, Fine-Tuned) |
-| **Backend**   | Python, Flask                  |
-| **Frontend**  | HTML, CSS, Bootstrap           |
-| **Database**  | (Optional: SQLite/MySQL for login) |
-| **Hardware**  | Raspberry Pi, Python Serial Communication |
-| **Others**    | OpenCV, PySerial, NumPy        |
+| Layer         | Tools/Frameworks                        |
+|---------------|-----------------------------------------|
+| Model         | YOLOv10n (pretrained + custom trained)  |
+| Backend       | Python, Flask                           |
+| Frontend      | HTML, CSS, Bootstrap                    |
+| Hardware      | Raspberry Pi, PySerial, GPIO            |
+| Others        | OpenCV, NumPy                           |
 
 ---
 
 ## 🎯 YOLOv10 Model Training
 
-- **Base Model**: YOLOv10n (`yolov10n.pt`)
-- **Training Dataset**: Custom dataset with 5 fruit stages
-- **Output Models**:
-  - `best.pt` – Best performing weights
-  - `last.pt` – Last epoch weights
-- **Model Format**: PyTorch `.pt`
-- **Inference Script**: Used `best.pt` model for predictions in the Flask app
+- **Base Model**: `yolov10n.pt`
+- **Dataset**: Custom-labeled pomegranate dataset (5 classes)
+- **Training Output**:
+  - `best.pt`: Best performing weights
+  - `last.pt`: Final epoch weights
+- **Inference Model**: `best.pt` is used in the Flask app for predictions
 
 ---
 
 ## 🌐 Flask Web App Features
 
-| Page        | Description |
-|-------------|-------------|
-| **Home**    | Introduction to the platform |
-| **Login/Register** | User authentication |
-| **Upload Page** | Upload image/video for prediction |
-| **Live Detection** | Real-time camera detection |
+| Page              | Description |
+|-------------------|-------------|
+| **Home**          | Welcome page |
+| **Login/Register**| User authentication |
+| **Upload Page**   | Upload image/video for detection |
+| **Live Detection**| Real-time camera detection using OpenCV |
 
-- Detection results are overlaid on images/videos using OpenCV.
-- User-friendly UI built with Bootstrap.
-- Automatic detection triggers further actions (e.g., hardware signal).
+### 🔍 Additional Features:
+
+- Real-time detection overlays using bounding boxes
+- Detection results control hardware actions
+- Clean Bootstrap-based UI
 
 ---
 
 ## 🔌 Hardware Integration
 
-You connected a **Raspberry Pi** board to the Flask app using **serial communication**.
+Raspberry Pi is used to interact with external components (like LEDs, motors) based on the detection result.
 
-- Each detected fruit stage is mapped to a number.
-- This data is sent to Raspberry Pi through a serial port.
-- Based on received value, hardware performs actions (like turning ON specific LED or relays).
+- **Serial communication** is established using the `run.py` script
+- Hardware responses are triggered by values received from the AI detection output
 
-### Example Hardware Actions:
-- **1**: Bud – Turn ON blue LED
-- **2**: Early-Fruit – Turn ON yellow LED
-- **3**: Flower – Turn ON pink LED
-- **4**: Mid-Growth – Trigger pump for pesticides
-- **5**: Ripe – Trigger motor for plucking
+### 🧠 Example Actions:
+
+| Stage         | Hardware Action                 |
+|---------------|----------------------------------|
+| Bud           | Blue LED ON                     |
+| Early-Fruit   | Yellow LED ON                   |
+| Flower        | Pink LED ON                     |
+| Mid-Growth    | Trigger pesticide sprayer       |
+| Ripe          | Trigger fruit plucking mechanism|
 
 ---
 
 ## 🔁 Serial Communication Mapping
 
-| Stage         | Serial Code |
-|---------------|-------------|
-| Bud           | 1           |
-| Early-Fruit   | 2           |
-| Flower        | 3           |
-| Mid-Growth    | 4           |
-| Ripe          | 5           |
+| Stage         | Sent Code |
+|---------------|-----------|
+| Bud           | `1`       |
+| Early-Fruit   | `2`       |
+| Flower        | `3`       |
+| Mid-Growth    | `4`       |
+| Ripe          | `5`       |
 
-Serial connection is established using `pyserial` and the data is sent in the `run.py` file.
+Sent through serial port using PySerial in `run.py`.
 
 ---
-
-
 
 ## 🚀 How to Run
 
-### 1. Clone the Repo
+### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/tejteja54321/Pomogranate-Fruit-Stage-Detection-YOLO.git
-cd pomegranate-fruit-stage-detection
-
-
-
-
-
-
-###2. Setup Python Environment
-```bash
-pip install -r requirements.txt
-
-
-### 3. Run the Flask App
-```bash
-python app.py
-
-### 4. Run Serial Communication (Hardware Script)
-```bash
-python run.py
-
-### 5. Access Web App
-Go to http://127.0.0.1:5000 in your browser.
-
-
----
-
-
-## 📁 Project Structure
-
-pomegranate-fruit-stage-detection/
-│
-├── yolov10/                   # YOLOv10 model files
-│   ├── best.pt
-│   └── last.pt
-│
-├── templates/                 # HTML templates
-│   ├── home.html
-│   ├── login.html
-│   ├── upload.html
-│   └── live_detection.html
-│
-├── static/                    # CSS, JS, Images
-│
-├── app.py                     # Main Flask app
-├── run.py                     # Serial communication script
-├── requirements.txt
-└── README.md
-
-
+git clone https://github.com/tejteja54321/Pomegranate-Fruit-Stage-Detection-YOLO.git
+cd Pomegranate-Fruit-Stage-Detection-YOLO
