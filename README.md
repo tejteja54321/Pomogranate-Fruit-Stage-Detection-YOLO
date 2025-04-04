@@ -160,9 +160,11 @@ Pomegranate-Fruit-Stage-Detection-YOLO/
 │   ├── register.html
 │   ├── upload.html
 │   └── live_detection.html
+│   ├── performance.html
+│   └── charts.html
 │
 ├── static/                     # CSS, images, custom JS
-│   └── style.css
+│   └── css & js files
 │
 ├── app.py                      # Flask backend
 ├── run.py                      # Raspberry Pi GPIO + Serial controller
