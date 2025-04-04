@@ -119,9 +119,11 @@ Sent through serial port using PySerial in `run.py`.
 ## 🚀 How to Run
 
 ### 1️⃣ Clone the Repository
-
+``` bash
 git clone https://github.com/tejteja54321/Pomegranate-Fruit-Stage-Detection-YOLO.git
 cd Pomegranate-Fruit-Stage-Detection-YOLO
 
+---
 
+``bash
 ### Run
