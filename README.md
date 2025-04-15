@@ -139,7 +139,7 @@ python app.py
 
 ### 4️⃣ Run the Raspberry Pi Serial Communication Script (Hardware Control)
 ``` bash
-python run.py
+python main.py or python auto.py
 ```
 
 ### 5️⃣ Open in Browser
