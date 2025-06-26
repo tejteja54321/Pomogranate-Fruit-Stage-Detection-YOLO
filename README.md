@@ -87,20 +87,24 @@ This project identifies **five growth stages** of a pomegranate fruit and sends 
 
 ## 🔌 Hardware Integration
 
-Raspberry Pi is used to interact with external components (like LEDs, motors) based on the detection result.
+Raspberry Pi Pico is used to interface with external components such as DC motors, spraying mechanisms, and robotic arms for real-time action based on AI detection output from the YOLO model. The hardware performs physical tasks like spraying pesticides or plucking fruits depending on the pomegranate fruit stage detected.
 
 - **Serial communication** is established using the `run.py` script
-- Hardware responses are triggered by values received from the AI detection output
+- A run.py script establishes serial communication between the AI-based detection system and the Raspberry Pi Pico microcontroller.
+
+- Based on the detection output (Stage 1 to 5), numeric codes are sent to the Raspberry Pi Pico to perform specific actions.
+
+- The robot receives these codes and triggers physical operations using motors and actuators.
 
 ### 🧠 Example Actions:
 
-| Stage         | Hardware Action                     |
-|---------------|--------------------------------------|
-| Bud           | Sends value `1` and displays on LED  |
-| Early-Fruit   | Sends value `2` and displays on LED  |
-| Flower        | Sends value `3` and displays on LED  |
-| Mid-Growth    | Sends value `4` and displays on LED  |
-| Ripe          | Sends value `5` and displays on LED  |
+| Stage         | Hardware Action                          |
+|---------------|------------------------------------------|
+| Bud           | Activates the pesticide spraying system  |
+| Early-Fruit   | Activates the pesticide spraying system  |
+| Flower        | Activates the pesticide spraying system  |
+| Mid-Growth    | Activates the plucking mechanism         |
+| Ripe          | Activates the plucking mechanism         |
 
 
 ---
@@ -118,7 +122,19 @@ Raspberry Pi is used to interact with external components (like LEDs, motors) ba
 Sent through serial port using PySerial in `run.py`.
 
 ---
+### ⚙️ Hardware Components:
 
+| Component                   | Description                                                   |
+|-----------------------------|---------------------------------------------------------------|
+| Raspberry Pi Pico           | Microcontroller used for receiving signals and controlling    | |                             | hardware actions.                                             |
+| DC Motor (100 RPM)          | Drives movement of the robot and mechanical arm.              |
+| L293D Motor Driver Circuit  | Controls direction and speed of the DC motors.                |
+| Pick and Place Mechanism    | Arm system designed to pluck the fruit or hold a sprayer      | |                             | for pesticide application.                                    |
+| Sprayer Module	            | Electronically controlled pesticide spraying mechanism.       |
+| Battery Pack	              | Powers the entire hardware system for portability.            |
+| Chassis and Wheels		      | Physical base allowing mobility across fields.                |
+
+---
 ## 🚀 How to Run
 
 ### 1️⃣ Clone the Repository
@@ -167,6 +183,8 @@ Pomegranate-Fruit-Stage-Detection-YOLO/
 │   └── css & js files
 │
 ├── app.py                      # Flask backend
+├── Aurdino_Code.ino            # Hardware Aurdino Code
+├── Raspberrypi_ESP32_Code.ino  # Hardware Raspberry Pi ESP32 Code
 ├── run.py                      # Flask + Raspberry Pi GPIO + Serial controller
 ├── requirements.txt            # Required Python libraries
 └── README.md                   # Project documentation
