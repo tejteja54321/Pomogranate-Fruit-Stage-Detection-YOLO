@@ -124,15 +124,15 @@ Sent through serial port using PySerial in `run.py`.
 ---
 ### ⚙️ Hardware Components:
 
-| Component                   | Description                                                   |
-|-----------------------------|---------------------------------------------------------------|
-| Raspberry Pi Pico           | Microcontroller used for receiving signals and controlling    | |                             | hardware actions.                                             |
-| DC Motor (100 RPM)          | Drives movement of the robot and mechanical arm.              |
-| L293D Motor Driver Circuit  | Controls direction and speed of the DC motors.                |
-| Pick and Place Mechanism    | Arm system designed to pluck the fruit or hold a sprayer      | |                             | for pesticide application.                                    |
-| Sprayer Module	            | Electronically controlled pesticide spraying mechanism.       |
-| Battery Pack	              | Powers the entire hardware system for portability.            |
-| Chassis and Wheels		      | Physical base allowing mobility across fields.                |
+| Component                   | Description                                                                             |
+|-----------------------------|-----------------------------------------------------------------------------------------|
+| Raspberry Pi Pico           | Microcontroller used for receiving signals and controlling hardware actions.            |                                             
+| DC Motor (100 RPM)          | Drives movement of the robot and mechanical arm.                                        |
+| L293D Motor Driver Circuit  | Controls direction and speed of the DC motors.                                          |
+| Pick and Place Mechanism    | Arm system designed to pluck the fruit or hold a sprayer for pesticide application.     |
+| Sprayer Module	            | Electronically controlled pesticide spraying mechanism.                                 |
+| Battery Pack	              | Powers the entire hardware system for portability.                                      |
+| Chassis and Wheels		      | Physical base allowing mobility across fields.                                          |
 
 ---
 ## 🚀 How to Run
@@ -155,6 +155,7 @@ python app.py
 
 ### 4️⃣ Run the Raspberry Pi Serial Communication Script (Hardware Control)
 ``` bash
+Upload raspberry_code.ino file in hardware through aurdino software 
 python main.py or python auto.py
 ```
 
